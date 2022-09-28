@@ -1,16 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyle from "../GlobalStyle";
+import Login from "../Login/Login";
 import Home from "../Home/Home";
-import Main from "../Main/Main";
-
 export default function App(){
 return (
 <>
 <GlobalStyle/>
 <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/Zap" element={<Main/>}></Route>
+        <Route path="/" element={<Login/>}></Route>
+        <Route path="/Zap" element={<Home/>}></Route>
        
       </Routes>
     </BrowserRouter>
