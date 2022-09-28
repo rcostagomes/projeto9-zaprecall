@@ -1,10 +1,26 @@
-export const ReactQuestions = [
-{Q: "O que é JSX?" , R: "Uma extensão de linguagem do JavaScript"},
-{Q: "O React é __", R: "uma biblioteca JavaScript para construção de interfaces"},
-{Q:" Componentes devem iniciar com __", R: "letra maiúscula"},
-{Q:" Podemos colocar __ dentro do JSX ", R: "expressões"},
-{Q: "O ReactDOM nos ajuda __ ", R: "interagindo com a DOM para colocar componentes React na mesma"},
-{Q:"Usamos o npm para __", R: "gerenciar os pacotes necessários e suas dependências"},
-{Q: "Usamos props para __", R: "passar diferentes informações para componentes" },
-{Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"},
+export const QuestionsArray = [
+{Q: "O que é JSX?"},
+{Q: "O React é __"},
+{Q:" Componentes devem iniciar com __"},
+{Q:" Podemos colocar __ dentro do JSX "},
+{Q: "O ReactDOM nos ajuda __ "},
+{Q:"Usamos o npm para __"},
+{Q: "Usamos props para __"},
+{Q: "Usamos estado (state) para __"},
+]
+
+
+
+
+export const ReplyArray = [
+{R: "Uma extensão de linguagem do JavaScript"},
+{R: "uma biblioteca JavaScript para construção de interfaces"},
+{R: "letra maiúscula"},
+{R: "expressões"},
+{R: "interagindo com a DOM para colocar componentes React na mesma"},
+{R: "gerenciar os pacotes necessários e suas dependências"},
+{R: "passar diferentes informações para componentes"},
+{R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"},
+
+
 ]

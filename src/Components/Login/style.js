@@ -11,7 +11,7 @@ width: 100%;
   flex-direction: column;
   z-index: 1;
   position: absolute;
-  background-color: var(--cor-fundo);
+  background-color: #FB6B6B;
   h1 {
     margin-bottom: 30px;
 font-family: 'Righteous';

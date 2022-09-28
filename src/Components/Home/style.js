@@ -35,8 +35,12 @@ export const Header = styled.div`
 export const Perguntas = styled.div`
   display: flex;
   flex-direction: column;
-  button {
-    font-family: "Righteous";
+  
+`;
+
+
+export const QuestionClosed = styled.button`
+font-family: "Righteous";
     width: 300px;
     height: 35px;
     background-color: #ffffff;
@@ -47,5 +51,51 @@ export const Perguntas = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor:pointer;
+
+`
+export const QuestionOpen = styled.button`
+  width: 300px;
+  margin: 12px;
+  padding: 15px;
+  min-height: 100px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFFFD4;
+
+  img {
+   cursor: pointer;
+   margin-left: 245px;
   }
-`;
+
+`
+export const ReplyOpen = styled.button`
+width: 300px;
+  margin: 12px;
+  padding: 15px;
+  min-height: 100px;
+  background: #FFFFD5;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFFFD4;
+`
