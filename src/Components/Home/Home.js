@@ -26,8 +26,12 @@ function Pergunta(props) {
   const [Reply, setReply] = useState(true); // Virar de pergunta para Respota
   const [QuestionIndex, setQuestionIndex] = useState() // Pega o Array de Perguntas na posição da Pergunta
   const [ReplyIndex, setReplyIndex ] = useState ("Resposta") // Pega o Array de Respostas na Posição da Pergunta 
- // const [ColorQuestion, setColorQuestion] = useState(""); // Define a cor da resposta 
-  
+  const [ColorQuestion, setColorQuestion] = useState(""); // Define a cor da resposta 
+  const [IonIcon, setIonIcon] = useState("play-outline") // Define o ion-icon que vai ser mostrado na resposta
+  const [Risk, setRisk]= useState("") // Define a palvra riscada após responder 
+  //const  [Contador, setContador] = useState(0) // Numero de Perguntas Concluidas
+
+
   function openQuestion(Num) {
     console.log(Num)
     setQuestionIndex(QuestionsArray[Num-1].Q)
@@ -39,11 +43,36 @@ function Pergunta(props) {
     setReply(false);
     setReplyIndex(ReplyArray[Num-1].R)
   }
+function ColorGreen(){
+  setReply(true); 
+setColorQuestion("#2FBE34")
+setQuestion(true);
+setRisk("line-through")
+setIonIcon("checkmark-circle")
+}
+
+function ColorRed(){
+  setReply(true); 
+  setColorQuestion("#FF3030")
+  setQuestion(true);
+  setRisk("line-through")
+  setIonIcon("close-circle")
+  }
+
+function ColorYellow(){
+  setReply(true); 
+    setColorQuestion("#FF922E")
+    setQuestion(true);
+    setRisk("line-through")
+    setIonIcon("help-circle")
+    }
 
   return Question === true ? (
-    <QuestionClosed onClick={() => openQuestion(`${props.numero}`)}>
-      pergunta {props.numero}
+    
+    <QuestionClosed style={{ textDecoration: `${Risk}` ,color: `${ColorQuestion}` }} onClick={() => openQuestion(`${props.numero}`)}>
+     <h1>  pergunta {props.numero} </h1> <ion-icon name={IonIcon}></ion-icon>
     </QuestionClosed>
+    
   ) : Reply === true ? (
     <QuestionOpen>
       {QuestionIndex}
@@ -54,7 +83,17 @@ function Pergunta(props) {
       />
     </QuestionOpen>
   ) : (
-    <ReplyOpen> {ReplyIndex} </ReplyOpen>
+    <ReplyOpen>
+      <div> 
+       {ReplyIndex} 
+      </div>
+      <div> 
+      
+      <button style={{ backgroundColor: "#FF3030" }} onClick={ColorRed}> Não Lembrei</button>
+      <button style={{ backgroundColor: "#FF922E" }} onClick={ColorYellow}> Quase Não Lembrei </button>
+      <button style={{ backgroundColor: "#2FBE34" }} onClick={ColorGreen}> Zap ! </button>
+      </div>
+       </ReplyOpen>
   );
   
 }
@@ -65,13 +104,17 @@ export default function Home() {
         <Header>
           <img src={Logo} alt="Logo pagina zap" />
           <h1> Zap Recall</h1>
+          
         </Header>
+        
         <Perguntas>
           {ArrayPerguntas.map((AP, index) => (
             <Pergunta key={index} numero={AP.numero} />
           ))}
+          
         </Perguntas>
-        <Footer />
+        
+        <Footer/>
       </Main>
     </>
   );

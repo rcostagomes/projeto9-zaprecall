@@ -52,6 +52,10 @@ font-family: "Righteous";
     align-items: center;
     justify-content: space-between;
     cursor:pointer;
+    ion-icon{
+font-size: 24px;
+
+  }
 
 `
 export const QuestionOpen = styled.button`
@@ -77,10 +81,13 @@ export const QuestionOpen = styled.button`
    cursor: pointer;
    margin-left: 245px;
   }
+  ion-icon{
+font-size: 24px;
 
+  }
 `
 export const ReplyOpen = styled.button`
-width: 300px;
+width: 310px;
   margin: 12px;
   padding: 15px;
   min-height: 100px;
@@ -94,8 +101,33 @@ width: 300px;
   line-height: 22px;
   color: #333333;
   position: relative;
+  background-color: #FFFFD4;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: #FFFFD4;
+  align-items: center;
+  justify-content: center;
+ 
+  div{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  button{
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 5px;
+    width: 85px;
+    height: 40px;
+    background-color: #333333;
+    border-radius: 5px;
+    color: white;
+
+  }
+  ion-icon{
+font-size: 24px;
+
+  }
 `
