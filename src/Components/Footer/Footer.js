@@ -6,8 +6,8 @@ const {Respondidas} = props
 
   return (
     <>
-      <Contador>
-        <h1> {Respondidas}/8 Concluidos</h1>
+      <Contador data-identifier="flashcard-counter" >
+        <h1  > {Respondidas}/8 Concluidos</h1>
       </Contador>
     </>
   );

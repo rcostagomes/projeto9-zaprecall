@@ -54,35 +54,35 @@ export default function Pergunta(props) {
   }
 
   return Question === true ? (
-    <QuestionClosed
+    <QuestionClosed data-identifier="flashcard-show-btn"
       disabled={disable}
       style={{ textDecoration: `${Risk}`, color: `${ColorQuestion}` }}
       onClick={() => openQuestion(`${numero}`)}
     >
-      <h1> pergunta {numero} </h1> <ion-icon name={IonIcon}></ion-icon>
+      <h1> pergunta {numero} </h1> <ion-icon data-identifier="flashcard-status" name={IonIcon}></ion-icon>
     </QuestionClosed>
   ) : Reply === true ? (
-    <QuestionOpen>
+    <QuestionOpen data-identifier="flashcard-index-item" > 
       {QuestionIndex}
-      <img
+      <img data-identifier="flashcard-turn-btn"
         onClick={() => OpenReply(`${numero}`)}
         src={Virar}
         alt="Seta Virar Pergunta"
       />
     </QuestionOpen>
   ) : (
-    <ReplyOpen>
+    <ReplyOpen data-identifier="flashcard-answer" >
       <div>{ReplyIndex}</div>
       <div>
-        <button style={{ backgroundColor: "#FF3030" }} onClick={ColorRed}>
+        <button data-identifier="forgot-btn" style={{ backgroundColor: "#FF3030" }} onClick={ColorRed}>
           {" "}
           Não Lembrei
         </button>
-        <button style={{ backgroundColor: "#FF922E" }} onClick={ColorYellow}>
+        <button data-identifier="almost-forgot-btn" style={{ backgroundColor: "#FF922E" }} onClick={ColorYellow}>
           {" "}
           Quase Não Lembrei{" "}
         </button>
-        <button style={{ backgroundColor: "#2FBE34" }} onClick={ColorGreen}>
+        <button data-identifier="zap-btn" style={{ backgroundColor: "#2FBE34" }} onClick={ColorGreen}>
           {" "}
           Zap !{" "}
         </button>

@@ -8,7 +8,7 @@ export default function Login() {
       <h1> ZapRecall </h1>
 
       <Link to={`/zap`}>
-        <button> Iniciar Recall </button>
+        <button data-identifier="start-btn" > Iniciar Recall </button>
       </Link>
     </TelaInicial>
   );
