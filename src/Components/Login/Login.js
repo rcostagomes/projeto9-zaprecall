@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <TelaInicial>
       <img src={Logo} alt="Logo do site" />
-      <h1> Zap Recall </h1>
+      <h1> ZapRecall </h1>
 
       <Link to={`/zap`}>
         <button> Iniciar Recall </button>
